@@ -13,45 +13,56 @@ namespace ParkingBrake
 {
 	public partial class FormMovie : Form
 	{
-		private Movie currentMovie;
 
 		public FormMovie()
 		{
 			InitializeComponent();
-		}
-
-		public FormMovie(Movie mov)
-		{
-			InitializeComponent();
-
-			currentMovie = mov;
 
 			//Populate title list
-			listBoxTitle.DataSource = currentMovie.titleList;
-			listBoxTitle.SelectedIndex = currentMovie.mainFeatureTitleIndex;
+			listBoxTitle.DataSource = PB.currentMovie.titleList;
+			listBoxTitle.SelectedIndex = PB.currentMovie.mainFeatureTitleIndex;
 
-			//Populate chapter list
+			//Populate chapter list and assign current title
 			if (listBoxTitle.SelectedItem != null)
-				listBoxChapter.DataSource = currentMovie.titleList[listBoxTitle.SelectedIndex].chapterList;
+			{
+				PB.currentTitle = PB.currentMovie.titleList[listBoxTitle.SelectedIndex];
+				listBoxChapter.DataSource = PB.currentTitle.chapterList;
+			}
 
 			//MessageBox.Show(currentMovie.mainFeatureTitleNumber + "/" + currentMovie.mainFeatureTitleIndex.ToString());
 		}
 
-		private void buttonGo_Click(object sender, EventArgs e)
-		{
-			if (checkBoxForeign.Checked)
-			{
-				FormForeign frmForeign = new FormForeign();
-				frmForeign.Show();
-			}
-			else
-				this.Close();
-		}
-
 		private void listBoxTitle_SelectedIndexChanged(object sender, EventArgs e)
 		{
+			//Populate chapter list and assign current title
 			if (listBoxTitle.SelectedIndex >= 0)
-				listBoxChapter.DataSource = currentMovie.titleList[listBoxTitle.SelectedIndex].chapterList;
+			{
+				PB.currentTitle = PB.currentMovie.titleList[listBoxTitle.SelectedIndex];
+				listBoxChapter.DataSource = PB.currentTitle.chapterList;
+			}
+		}
+
+		private void buttonForeign_Click(object sender, EventArgs e)
+		{
+			FormForeign frmForeign = new FormForeign();
+			frmForeign.Show();
+		}
+
+		private void buttonDone_Click(object sender, EventArgs e)
+		{
+			//Add to progress
+			if (PB.sub)
+			{
+				//Create subbed job
+
+				//Create dubbed job
+
+			}
+			else
+			{
+				//Create regular job
+			}
+			this.Close();
 		}
 	}
 }

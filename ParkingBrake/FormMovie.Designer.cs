@@ -34,8 +34,10 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.textBoxQuality = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
-			this.checkBoxForeign = new System.Windows.Forms.CheckBox();
-			this.buttonGo = new System.Windows.Forms.Button();
+			this.buttonDone = new System.Windows.Forms.Button();
+			this.buttonForeign = new System.Windows.Forms.Button();
+			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.label4 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// listBoxTitle
@@ -75,7 +77,7 @@
 			// 
 			// textBoxQuality
 			// 
-			this.textBoxQuality.Location = new System.Drawing.Point(96, 279);
+			this.textBoxQuality.Location = new System.Drawing.Point(96, 385);
 			this.textBoxQuality.Name = "textBoxQuality";
 			this.textBoxQuality.Size = new System.Drawing.Size(36, 20);
 			this.textBoxQuality.TabIndex = 6;
@@ -85,40 +87,58 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(12, 282);
+			this.label3.Location = new System.Drawing.Point(12, 388);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(78, 13);
 			this.label3.TabIndex = 7;
 			this.label3.Text = "Quality (18-21):";
 			// 
-			// checkBoxForeign
+			// buttonDone
 			// 
-			this.checkBoxForeign.AutoSize = true;
-			this.checkBoxForeign.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.checkBoxForeign.Location = new System.Drawing.Point(158, 281);
-			this.checkBoxForeign.Name = "checkBoxForeign";
-			this.checkBoxForeign.Size = new System.Drawing.Size(100, 17);
-			this.checkBoxForeign.TabIndex = 8;
-			this.checkBoxForeign.Text = "Foreign Options";
-			this.checkBoxForeign.UseVisualStyleBackColor = true;
+			this.buttonDone.Location = new System.Drawing.Point(291, 383);
+			this.buttonDone.Name = "buttonDone";
+			this.buttonDone.Size = new System.Drawing.Size(53, 23);
+			this.buttonDone.TabIndex = 9;
+			this.buttonDone.Text = "Done";
+			this.buttonDone.UseVisualStyleBackColor = true;
+			this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
 			// 
-			// buttonGo
+			// buttonForeign
 			// 
-			this.buttonGo.Location = new System.Drawing.Point(285, 277);
-			this.buttonGo.Name = "buttonGo";
-			this.buttonGo.Size = new System.Drawing.Size(59, 23);
-			this.buttonGo.TabIndex = 9;
-			this.buttonGo.Text = "Go";
-			this.buttonGo.UseVisualStyleBackColor = true;
-			this.buttonGo.Click += new System.EventHandler(this.buttonGo_Click);
+			this.buttonForeign.Location = new System.Drawing.Point(181, 383);
+			this.buttonForeign.Name = "buttonForeign";
+			this.buttonForeign.Size = new System.Drawing.Size(104, 23);
+			this.buttonForeign.TabIndex = 10;
+			this.buttonForeign.Text = "Foreign Options";
+			this.buttonForeign.UseVisualStyleBackColor = true;
+			this.buttonForeign.Click += new System.EventHandler(this.buttonForeign_Click);
+			// 
+			// listBox1
+			// 
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.Location = new System.Drawing.Point(12, 282);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(332, 95);
+			this.listBox1.TabIndex = 11;
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(9, 266);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(70, 13);
+			this.label4.TabIndex = 12;
+			this.label4.Text = "Audio Tracks";
 			// 
 			// FormMovie
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(357, 313);
-			this.Controls.Add(this.buttonGo);
-			this.Controls.Add(this.checkBoxForeign);
+			this.ClientSize = new System.Drawing.Size(357, 412);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.listBox1);
+			this.Controls.Add(this.buttonForeign);
+			this.Controls.Add(this.buttonDone);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.textBoxQuality);
 			this.Controls.Add(this.label2);
@@ -141,7 +161,9 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textBoxQuality;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.CheckBox checkBoxForeign;
-		private System.Windows.Forms.Button buttonGo;
+		private System.Windows.Forms.Button buttonDone;
+		private System.Windows.Forms.Button buttonForeign;
+		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.Label label4;
 	}
 }

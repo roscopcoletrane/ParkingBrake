@@ -82,6 +82,7 @@
     <Compile Include="HandBrake_API\Movie.cs" />
     <Compile Include="HandBrake_API\SubtitleTrack.cs" />
     <Compile Include="HandBrake_API\Title.cs" />
+    <Compile Include="PB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormForeign.resx">
@@ -92,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMovie.resx">
       <DependentUpon>FormMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProgress.resx">
+      <DependentUpon>FormProgress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

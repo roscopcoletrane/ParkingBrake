@@ -29,18 +29,13 @@
 		private void InitializeComponent()
 		{
 			this.checkBoxSub = new System.Windows.Forms.CheckBox();
-			this.checkBoxDub = new System.Windows.Forms.CheckBox();
 			this.panelSub = new System.Windows.Forms.Panel();
-			this.panelDub = new System.Windows.Forms.Panel();
-			this.listBoxSubAudio = new System.Windows.Forms.ListBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.listBoxForeignSubtitle = new System.Windows.Forms.ListBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.listBoxSubSub = new System.Windows.Forms.ListBox();
-			this.listBoxDubAudio = new System.Windows.Forms.ListBox();
-			this.label3 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.listBoxForeignAudio = new System.Windows.Forms.ListBox();
 			this.buttonGo = new System.Windows.Forms.Button();
 			this.panelSub.SuspendLayout();
-			this.panelDub.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// checkBoxSub
@@ -54,55 +49,25 @@
 			this.checkBoxSub.UseVisualStyleBackColor = true;
 			this.checkBoxSub.CheckedChanged += new System.EventHandler(this.checkBoxSub_CheckedChanged);
 			// 
-			// checkBoxDub
-			// 
-			this.checkBoxDub.AutoSize = true;
-			this.checkBoxDub.Location = new System.Drawing.Point(15, 288);
-			this.checkBoxDub.Name = "checkBoxDub";
-			this.checkBoxDub.Size = new System.Drawing.Size(102, 17);
-			this.checkBoxDub.TabIndex = 1;
-			this.checkBoxDub.Text = "Dubbed Version";
-			this.checkBoxDub.UseVisualStyleBackColor = true;
-			this.checkBoxDub.CheckedChanged += new System.EventHandler(this.checkBoxDub_CheckedChanged);
-			// 
 			// panelSub
 			// 
-			this.panelSub.Controls.Add(this.listBoxSubSub);
+			this.panelSub.Controls.Add(this.listBoxForeignSubtitle);
 			this.panelSub.Controls.Add(this.label2);
 			this.panelSub.Controls.Add(this.label1);
-			this.panelSub.Controls.Add(this.listBoxSubAudio);
+			this.panelSub.Controls.Add(this.listBoxForeignAudio);
 			this.panelSub.Enabled = false;
 			this.panelSub.Location = new System.Drawing.Point(12, 35);
 			this.panelSub.Name = "panelSub";
 			this.panelSub.Size = new System.Drawing.Size(450, 229);
 			this.panelSub.TabIndex = 2;
 			// 
-			// panelDub
+			// listBoxForeignSubtitle
 			// 
-			this.panelDub.Controls.Add(this.label3);
-			this.panelDub.Controls.Add(this.listBoxDubAudio);
-			this.panelDub.Enabled = false;
-			this.panelDub.Location = new System.Drawing.Point(12, 311);
-			this.panelDub.Name = "panelDub";
-			this.panelDub.Size = new System.Drawing.Size(450, 114);
-			this.panelDub.TabIndex = 3;
-			// 
-			// listBoxSubAudio
-			// 
-			this.listBoxSubAudio.FormattingEnabled = true;
-			this.listBoxSubAudio.Location = new System.Drawing.Point(3, 16);
-			this.listBoxSubAudio.Name = "listBoxSubAudio";
-			this.listBoxSubAudio.Size = new System.Drawing.Size(444, 95);
-			this.listBoxSubAudio.TabIndex = 0;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(3, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(70, 13);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "Audio Tracks";
+			this.listBoxForeignSubtitle.FormattingEnabled = true;
+			this.listBoxForeignSubtitle.Location = new System.Drawing.Point(3, 130);
+			this.listBoxForeignSubtitle.Name = "listBoxForeignSubtitle";
+			this.listBoxForeignSubtitle.Size = new System.Drawing.Size(444, 95);
+			this.listBoxForeignSubtitle.TabIndex = 3;
 			// 
 			// label2
 			// 
@@ -113,34 +78,26 @@
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Subtitle Tracks";
 			// 
-			// listBoxSubSub
+			// label1
 			// 
-			this.listBoxSubSub.FormattingEnabled = true;
-			this.listBoxSubSub.Location = new System.Drawing.Point(3, 130);
-			this.listBoxSubSub.Name = "listBoxSubSub";
-			this.listBoxSubSub.Size = new System.Drawing.Size(444, 95);
-			this.listBoxSubSub.TabIndex = 3;
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(3, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(70, 13);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "Audio Tracks";
 			// 
-			// listBoxDubAudio
+			// listBoxForeignAudio
 			// 
-			this.listBoxDubAudio.FormattingEnabled = true;
-			this.listBoxDubAudio.Location = new System.Drawing.Point(3, 16);
-			this.listBoxDubAudio.Name = "listBoxDubAudio";
-			this.listBoxDubAudio.Size = new System.Drawing.Size(444, 95);
-			this.listBoxDubAudio.TabIndex = 1;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(3, 0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(70, 13);
-			this.label3.TabIndex = 2;
-			this.label3.Text = "Audio Tracks";
+			this.listBoxForeignAudio.FormattingEnabled = true;
+			this.listBoxForeignAudio.Location = new System.Drawing.Point(3, 16);
+			this.listBoxForeignAudio.Name = "listBoxForeignAudio";
+			this.listBoxForeignAudio.Size = new System.Drawing.Size(444, 95);
+			this.listBoxForeignAudio.TabIndex = 0;
 			// 
 			// buttonGo
 			// 
-			this.buttonGo.Location = new System.Drawing.Point(403, 431);
+			this.buttonGo.Location = new System.Drawing.Point(400, 270);
 			this.buttonGo.Name = "buttonGo";
 			this.buttonGo.Size = new System.Drawing.Size(59, 23);
 			this.buttonGo.TabIndex = 10;
@@ -151,19 +108,16 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(474, 462);
+			this.ClientSize = new System.Drawing.Size(474, 302);
 			this.Controls.Add(this.buttonGo);
-			this.Controls.Add(this.panelDub);
 			this.Controls.Add(this.panelSub);
 			this.Controls.Add(this.checkBoxSub);
-			this.Controls.Add(this.checkBoxDub);
 			this.Name = "FormForeign";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "FormForeign";
+			this.Load += new System.EventHandler(this.FormForeign_Load);
 			this.panelSub.ResumeLayout(false);
 			this.panelSub.PerformLayout();
-			this.panelDub.ResumeLayout(false);
-			this.panelDub.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -172,15 +126,11 @@
 		#endregion
 
 		private System.Windows.Forms.CheckBox checkBoxSub;
-		private System.Windows.Forms.CheckBox checkBoxDub;
 		private System.Windows.Forms.Panel panelSub;
-		private System.Windows.Forms.ListBox listBoxSubSub;
+		private System.Windows.Forms.ListBox listBoxForeignSubtitle;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ListBox listBoxSubAudio;
-		private System.Windows.Forms.Panel panelDub;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.ListBox listBoxDubAudio;
+		private System.Windows.Forms.ListBox listBoxForeignAudio;
 		private System.Windows.Forms.Button buttonGo;
 
 	}

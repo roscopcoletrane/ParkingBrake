@@ -20,6 +20,7 @@ namespace ParkingBrake
 		public FormMain()
 		{
 			InitializeComponent();
+			PB.frmProgress = new FormProgress();
 		}
 
 		private void buttonLoad_Click(object sender, EventArgs e)
@@ -101,8 +102,11 @@ namespace ParkingBrake
 		{
 			if (listBoxMovies.SelectedIndex >= 0)
 			{
+				PB.currentMovie = movieList[listBoxMovies.SelectedIndex];
+				PB.SetDefault();
+
 				//Load movie dialog
-				FormMovie frmMovie = new FormMovie(movieList[listBoxMovies.SelectedIndex]);
+				FormMovie frmMovie = new FormMovie();
 				frmMovie.Show();
 			}
 		}
