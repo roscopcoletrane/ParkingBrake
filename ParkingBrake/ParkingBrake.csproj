@@ -44,11 +44,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormForeign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormForeign.Designer.cs">
+      <DependentUpon>FormForeign.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovie.Designer.cs">
+      <DependentUpon>FormMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProgress.Designer.cs">
+      <DependentUpon>FormProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTV.Designer.cs">
+      <DependentUpon>FormTV.cs</DependentUpon>
     </Compile>
     <Compile Include="HandBrake_API\Arg.cs" />
     <Compile Include="HandBrake_API\AudioTrack.cs" />
@@ -60,8 +84,14 @@
     <Compile Include="HandBrake_API\Title.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormForeign.resx">
+      <DependentUpon>FormForeign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMovie.resx">
+      <DependentUpon>FormMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

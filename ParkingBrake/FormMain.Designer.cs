@@ -52,6 +52,7 @@
 			this.buttonMovie.TabIndex = 1;
 			this.buttonMovie.Text = "Movie";
 			this.buttonMovie.UseVisualStyleBackColor = true;
+			this.buttonMovie.Click += new System.EventHandler(this.buttonMovie_Click);
 			// 
 			// buttonTV
 			// 
@@ -61,6 +62,7 @@
 			this.buttonTV.TabIndex = 2;
 			this.buttonTV.Text = "TV Show";
 			this.buttonTV.UseVisualStyleBackColor = true;
+			this.buttonTV.Click += new System.EventHandler(this.buttonTV_Click);
 			// 
 			// buttonLoad
 			// 

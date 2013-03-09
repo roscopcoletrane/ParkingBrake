@@ -31,6 +31,8 @@ namespace ParkingBrake
 			}
 		}
 
+		#region Load Movie List
+
 		private void InitMovieList(string path)
 		{
 			//If list/ListBox is already populated, clear it out
@@ -91,6 +93,20 @@ namespace ParkingBrake
 			listBoxMovies.DataSource = null;
 			listBoxMovies.DataSource = movieList;
 			listBoxMovies.Refresh();
+		}
+
+		#endregion
+
+		private void buttonMovie_Click(object sender, EventArgs e)
+		{
+			//Load movie dialog
+			FormMovie frmMovie = new FormMovie();
+			frmMovie.Show();
+		}
+
+		private void buttonTV_Click(object sender, EventArgs e)
+		{
+			//Load TV dialog
 		}
 	}
 }
