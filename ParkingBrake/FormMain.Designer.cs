@@ -31,9 +31,11 @@
 			this.listBoxMovies = new System.Windows.Forms.ListBox();
 			this.buttonMovie = new System.Windows.Forms.Button();
 			this.buttonTV = new System.Windows.Forms.Button();
-			this.buttonLoad = new System.Windows.Forms.Button();
+			this.buttonLoadInput = new System.Windows.Forms.Button();
 			this.textBoxFolderPath = new System.Windows.Forms.TextBox();
 			this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+			this.buttonLoadOutput = new System.Windows.Forms.Button();
+			this.textBoxOutputPath = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// listBoxMovies
@@ -46,7 +48,7 @@
 			// 
 			// buttonMovie
 			// 
-			this.buttonMovie.Location = new System.Drawing.Point(12, 285);
+			this.buttonMovie.Location = new System.Drawing.Point(12, 314);
 			this.buttonMovie.Name = "buttonMovie";
 			this.buttonMovie.Size = new System.Drawing.Size(121, 23);
 			this.buttonMovie.TabIndex = 1;
@@ -56,7 +58,7 @@
 			// 
 			// buttonTV
 			// 
-			this.buttonTV.Location = new System.Drawing.Point(141, 285);
+			this.buttonTV.Location = new System.Drawing.Point(141, 314);
 			this.buttonTV.Name = "buttonTV";
 			this.buttonTV.Size = new System.Drawing.Size(121, 23);
 			this.buttonTV.TabIndex = 2;
@@ -64,34 +66,53 @@
 			this.buttonTV.UseVisualStyleBackColor = true;
 			this.buttonTV.Click += new System.EventHandler(this.buttonTV_Click);
 			// 
-			// buttonLoad
+			// buttonLoadInput
 			// 
-			this.buttonLoad.Location = new System.Drawing.Point(12, 12);
-			this.buttonLoad.Name = "buttonLoad";
-			this.buttonLoad.Size = new System.Drawing.Size(39, 23);
-			this.buttonLoad.TabIndex = 3;
-			this.buttonLoad.Text = "Load";
-			this.buttonLoad.UseVisualStyleBackColor = true;
-			this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+			this.buttonLoadInput.Location = new System.Drawing.Point(12, 12);
+			this.buttonLoadInput.Name = "buttonLoadInput";
+			this.buttonLoadInput.Size = new System.Drawing.Size(48, 23);
+			this.buttonLoadInput.TabIndex = 3;
+			this.buttonLoadInput.Text = "Input";
+			this.buttonLoadInput.UseVisualStyleBackColor = true;
+			this.buttonLoadInput.Click += new System.EventHandler(this.buttonLoadInput_Click);
 			// 
 			// textBoxFolderPath
 			// 
-			this.textBoxFolderPath.Location = new System.Drawing.Point(57, 14);
+			this.textBoxFolderPath.Location = new System.Drawing.Point(66, 14);
 			this.textBoxFolderPath.Name = "textBoxFolderPath";
-			this.textBoxFolderPath.Size = new System.Drawing.Size(205, 20);
+			this.textBoxFolderPath.Size = new System.Drawing.Size(196, 20);
 			this.textBoxFolderPath.TabIndex = 4;
 			// 
 			// folderBrowserDialog
 			// 
-			this.folderBrowserDialog.SelectedPath = "F:\\TEST";
+			this.folderBrowserDialog.SelectedPath = "F:\\smalltest";
+			// 
+			// buttonLoadOutput
+			// 
+			this.buttonLoadOutput.Location = new System.Drawing.Point(12, 285);
+			this.buttonLoadOutput.Name = "buttonLoadOutput";
+			this.buttonLoadOutput.Size = new System.Drawing.Size(48, 23);
+			this.buttonLoadOutput.TabIndex = 5;
+			this.buttonLoadOutput.Text = "Output";
+			this.buttonLoadOutput.UseVisualStyleBackColor = true;
+			this.buttonLoadOutput.Click += new System.EventHandler(this.buttonLoadOutput_Click);
+			// 
+			// textBoxOutputPath
+			// 
+			this.textBoxOutputPath.Location = new System.Drawing.Point(66, 287);
+			this.textBoxOutputPath.Name = "textBoxOutputPath";
+			this.textBoxOutputPath.Size = new System.Drawing.Size(196, 20);
+			this.textBoxOutputPath.TabIndex = 6;
 			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(274, 314);
+			this.ClientSize = new System.Drawing.Size(274, 345);
+			this.Controls.Add(this.textBoxOutputPath);
+			this.Controls.Add(this.buttonLoadOutput);
 			this.Controls.Add(this.textBoxFolderPath);
-			this.Controls.Add(this.buttonLoad);
+			this.Controls.Add(this.buttonLoadInput);
 			this.Controls.Add(this.buttonTV);
 			this.Controls.Add(this.buttonMovie);
 			this.Controls.Add(this.listBoxMovies);
@@ -110,9 +131,11 @@
 		private System.Windows.Forms.ListBox listBoxMovies;
 		private System.Windows.Forms.Button buttonMovie;
 		private System.Windows.Forms.Button buttonTV;
-		private System.Windows.Forms.Button buttonLoad;
+		private System.Windows.Forms.Button buttonLoadInput;
 		private System.Windows.Forms.TextBox textBoxFolderPath;
 		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+		private System.Windows.Forms.Button buttonLoadOutput;
+		private System.Windows.Forms.TextBox textBoxOutputPath;
 	}
 }
 

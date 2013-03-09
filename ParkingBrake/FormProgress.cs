@@ -36,8 +36,11 @@ namespace ParkingBrake
 
 		public void AddToQueue(Job job)
 		{
+			this.Show();
 			queue.Add(job);
+			listBoxQueue.DataSource = null;
 			listBoxQueue.DataSource = queue;
+			listBoxQueue.Refresh();
 
 			if (!SecondaryThread.IsBusy)
 				SecondaryThread.RunWorkerAsync();

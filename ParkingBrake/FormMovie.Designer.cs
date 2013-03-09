@@ -36,7 +36,7 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.buttonDone = new System.Windows.Forms.Button();
 			this.buttonForeign = new System.Windows.Forms.Button();
-			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.listBoxAudio = new System.Windows.Forms.ListBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
@@ -83,6 +83,7 @@
 			this.textBoxQuality.TabIndex = 6;
 			this.textBoxQuality.Text = "20";
 			this.textBoxQuality.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxQuality.TextChanged += new System.EventHandler(this.textBoxQuality_TextChanged);
 			// 
 			// label3
 			// 
@@ -109,17 +110,17 @@
 			this.buttonForeign.Name = "buttonForeign";
 			this.buttonForeign.Size = new System.Drawing.Size(104, 23);
 			this.buttonForeign.TabIndex = 10;
-			this.buttonForeign.Text = "Foreign Options";
+			this.buttonForeign.Text = "Subtitle Options";
 			this.buttonForeign.UseVisualStyleBackColor = true;
 			this.buttonForeign.Click += new System.EventHandler(this.buttonForeign_Click);
 			// 
-			// listBox1
+			// listBoxAudio
 			// 
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.Location = new System.Drawing.Point(12, 282);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(332, 95);
-			this.listBox1.TabIndex = 11;
+			this.listBoxAudio.FormattingEnabled = true;
+			this.listBoxAudio.Location = new System.Drawing.Point(12, 282);
+			this.listBoxAudio.Name = "listBoxAudio";
+			this.listBoxAudio.Size = new System.Drawing.Size(332, 95);
+			this.listBoxAudio.TabIndex = 11;
 			// 
 			// label4
 			// 
@@ -136,7 +137,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(357, 412);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.listBox1);
+			this.Controls.Add(this.listBoxAudio);
 			this.Controls.Add(this.buttonForeign);
 			this.Controls.Add(this.buttonDone);
 			this.Controls.Add(this.label3);
@@ -148,6 +149,7 @@
 			this.Name = "FormMovie";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Movie Options";
+			this.Load += new System.EventHandler(this.FormMovie_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -163,7 +165,7 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button buttonDone;
 		private System.Windows.Forms.Button buttonForeign;
-		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.ListBox listBoxAudio;
 		private System.Windows.Forms.Label label4;
 	}
 }

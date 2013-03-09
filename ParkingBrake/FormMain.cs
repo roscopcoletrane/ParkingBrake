@@ -21,14 +21,33 @@ namespace ParkingBrake
 		{
 			InitializeComponent();
 			PB.frmProgress = new FormProgress();
+			PB.quality = "20";
 		}
 
-		private void buttonLoad_Click(object sender, EventArgs e)
+		private void buttonLoadInput_Click(object sender, EventArgs e)
 		{
 			if (folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
 			{
+				textBoxFolderPath.Text = folderBrowserDialog.SelectedPath;
+				PB.inputPath = folderBrowserDialog.SelectedPath;
+
+				if (textBoxOutputPath.Text.Equals(""))
+				{
+					textBoxOutputPath.Text = folderBrowserDialog.SelectedPath;
+					PB.outputPath = folderBrowserDialog.SelectedPath;
+				}
+
 				//Load Movies
 				InitMovieList(folderBrowserDialog.SelectedPath);
+			}
+		}
+
+		private void buttonLoadOutput_Click(object sender, EventArgs e)
+		{
+			if (folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+			{
+				textBoxOutputPath.Text = folderBrowserDialog.SelectedPath;
+				PB.outputPath = folderBrowserDialog.SelectedPath;
 			}
 		}
 

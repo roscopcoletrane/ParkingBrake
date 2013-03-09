@@ -34,7 +34,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.listBoxForeignAudio = new System.Windows.Forms.ListBox();
-			this.buttonGo = new System.Windows.Forms.Button();
+			this.buttonDone = new System.Windows.Forms.Button();
 			this.panelSub.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -95,21 +95,22 @@
 			this.listBoxForeignAudio.Size = new System.Drawing.Size(444, 95);
 			this.listBoxForeignAudio.TabIndex = 0;
 			// 
-			// buttonGo
+			// buttonDone
 			// 
-			this.buttonGo.Location = new System.Drawing.Point(400, 270);
-			this.buttonGo.Name = "buttonGo";
-			this.buttonGo.Size = new System.Drawing.Size(59, 23);
-			this.buttonGo.TabIndex = 10;
-			this.buttonGo.Text = "Go";
-			this.buttonGo.UseVisualStyleBackColor = true;
+			this.buttonDone.Location = new System.Drawing.Point(400, 270);
+			this.buttonDone.Name = "buttonDone";
+			this.buttonDone.Size = new System.Drawing.Size(59, 23);
+			this.buttonDone.TabIndex = 10;
+			this.buttonDone.Text = "Done";
+			this.buttonDone.UseVisualStyleBackColor = true;
+			this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
 			// 
 			// FormForeign
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(474, 302);
-			this.Controls.Add(this.buttonGo);
+			this.Controls.Add(this.buttonDone);
 			this.Controls.Add(this.panelSub);
 			this.Controls.Add(this.checkBoxSub);
 			this.Name = "FormForeign";
@@ -131,7 +132,7 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ListBox listBoxForeignAudio;
-		private System.Windows.Forms.Button buttonGo;
+		private System.Windows.Forms.Button buttonDone;
 
 	}
 }

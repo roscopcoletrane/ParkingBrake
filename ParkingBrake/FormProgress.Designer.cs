@@ -45,6 +45,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(760, 262);
 			this.Controls.Add(this.listBoxQueue);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.MaximizeBox = false;
 			this.Name = "FormProgress";
 			this.Text = "FormProgress";
 			this.Load += new System.EventHandler(this.FormProgress_Load);
