@@ -88,7 +88,7 @@ namespace ParkingBrake
 
 		private void SecondaryThread_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
-			MessageBox.Show("Loading Complete!");
+			//MessageBox.Show("Loading Complete!");
 
 			listBoxMovies.DataSource = null;
 			listBoxMovies.DataSource = movieList;
@@ -99,9 +99,12 @@ namespace ParkingBrake
 
 		private void buttonMovie_Click(object sender, EventArgs e)
 		{
-			//Load movie dialog
-			FormMovie frmMovie = new FormMovie();
-			frmMovie.Show();
+			if (listBoxMovies.SelectedIndex >= 0)
+			{
+				//Load movie dialog
+				FormMovie frmMovie = new FormMovie(movieList[listBoxMovies.SelectedIndex]);
+				frmMovie.Show();
+			}
 		}
 
 		private void buttonTV_Click(object sender, EventArgs e)

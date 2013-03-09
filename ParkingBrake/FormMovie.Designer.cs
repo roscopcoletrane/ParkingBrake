@@ -45,6 +45,7 @@
 			this.listBoxTitle.Name = "listBoxTitle";
 			this.listBoxTitle.Size = new System.Drawing.Size(163, 238);
 			this.listBoxTitle.TabIndex = 0;
+			this.listBoxTitle.SelectedIndexChanged += new System.EventHandler(this.listBoxTitle_SelectedIndexChanged);
 			// 
 			// listBoxChapter
 			// 
