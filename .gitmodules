@@ -1,0 +1,3 @@
+[submodule "ParkingBrake\\HandBrake_API"]
+	path = ParkingBrake\\HandBrake_API
+	url = https://github.com/roscopcoletrane/HandBrake_API.git
