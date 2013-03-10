@@ -63,5 +63,32 @@ namespace ParkingBrake
 
 			return argList;
 		}
+
+		public static void PlayMovieWithVLC(Movie mov)
+		{
+			string arguments = "\"" + mov.path + "\\" + mov.name + "\"";
+
+			string vlcPath;
+			if (Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE", EnvironmentVariableTarget.Machine).Equals("AMD64"))
+				vlcPath = @"C:\Program Files (x86)\VideoLAN\VLC\vlc.exe";
+			else
+				vlcPath = @"C:\Program Files\VideoLAN\VLC\vlc.exe";
+
+			if (!File.Exists(vlcPath))
+				return;
+
+			System.Diagnostics.ProcessStartInfo vlcProcess = new System.Diagnostics.ProcessStartInfo(vlcPath);
+			vlcProcess.RedirectStandardOutput = false;
+			vlcProcess.RedirectStandardError = false;
+			vlcProcess.UseShellExecute = true;
+			vlcProcess.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;
+			vlcProcess.CreateNoWindow = true;
+			vlcProcess.Arguments = arguments;
+
+			System.Diagnostics.Process scannerProcess;
+			scannerProcess = System.Diagnostics.Process.Start(vlcProcess);
+
+			scannerProcess.WaitForExit();
+		}
 	}
 }

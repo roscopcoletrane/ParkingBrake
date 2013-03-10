@@ -13,7 +13,6 @@ namespace ParkingBrake
 {
 	public partial class FormMovie : Form
 	{
-
 		public FormMovie()
 		{
 			InitializeComponent();
@@ -24,13 +23,13 @@ namespace ParkingBrake
 			//Populate title list
 			listBoxTitle.DataSource = PB.currentMovie.titleList;
 			listBoxTitle.SelectedIndex = PB.currentMovie.mainFeatureTitleIndex;
-			listBoxAudio.DataSource = PB.currentTitle.audioTrackList;
 
 			//Populate chapter list and assign current title
 			if (listBoxTitle.SelectedItem != null)
 			{
 				PB.currentTitle = PB.currentMovie.titleList[listBoxTitle.SelectedIndex];
 				listBoxChapter.DataSource = PB.currentTitle.chapterList;
+				listBoxAudio.DataSource = PB.currentTitle.audioTrackList;
 			}
 
 			textBoxQuality.Text = PB.quality;

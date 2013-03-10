@@ -132,7 +132,23 @@ namespace ParkingBrake
 
 		private void buttonTV_Click(object sender, EventArgs e)
 		{
-			//Load TV dialog
+			if (listBoxMovies.SelectedIndex >= 0)
+			{
+				PB.currentMovie = movieList[listBoxMovies.SelectedIndex];
+				PB.SetDefault();
+
+				//Load TV dialog
+				FormTV frmTV = new FormTV();
+				frmTV.Show();
+			}
+		}
+
+		private void listBoxMovies_DoubleClick(object sender, EventArgs e)
+		{
+			if (listBoxMovies.SelectedIndex >= 0)
+			{
+				PB.PlayMovieWithVLC(movieList[listBoxMovies.SelectedIndex]);
+			}
 		}
 	}
 }

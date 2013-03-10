@@ -31,6 +31,7 @@ namespace ParkingBrake
 			SecondaryThread.WorkerReportsProgress = true;
 
 			SecondaryThread.ProgressChanged += new ProgressChangedEventHandler(SecondaryThread_ProgressChanged);
+			SecondaryThread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(SecondaryThread_RunWorkerCompleted);
 		}
 
 		public void AddToQueue(Job job)
@@ -61,8 +62,11 @@ namespace ParkingBrake
 		{
 			listBoxQueue.DataSource = null;
 			listBoxQueue.DataSource = queue;
-			if (queue.Count == 0)
-				this.Hide();
+		}
+
+		private void SecondaryThread_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

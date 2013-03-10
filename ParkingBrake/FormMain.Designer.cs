@@ -45,6 +45,7 @@
 			this.listBoxMovies.Name = "listBoxMovies";
 			this.listBoxMovies.Size = new System.Drawing.Size(250, 238);
 			this.listBoxMovies.TabIndex = 0;
+			this.listBoxMovies.DoubleClick += new System.EventHandler(this.listBoxMovies_DoubleClick);
 			// 
 			// buttonMovie
 			// 
