@@ -86,7 +86,7 @@
 			// 
 			// folderBrowserDialog
 			// 
-			this.folderBrowserDialog.SelectedPath = "F:\\smalltest";
+			this.folderBrowserDialog.SelectedPath = "F:\\FullDisc";
 			// 
 			// buttonLoadOutput
 			// 

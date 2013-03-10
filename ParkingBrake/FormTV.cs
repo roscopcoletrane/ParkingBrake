@@ -20,6 +20,8 @@ namespace ParkingBrake
 
 		private void FormTV_Load(object sender, EventArgs e)
 		{
+			this.Text = PB.currentMovie.name;
+
 			//Populate title list
 			listBoxTitle.DataSource = PB.currentMovie.titleList;
 			listBoxTitle.SelectedIndex = PB.currentMovie.mainFeatureTitleIndex;

@@ -254,6 +254,8 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.listBoxChapter);
 			this.Controls.Add(this.listBoxTitle);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.MaximizeBox = false;
 			this.Name = "FormTV";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "FormTV";

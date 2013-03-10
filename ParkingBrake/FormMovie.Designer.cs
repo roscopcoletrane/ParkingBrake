@@ -146,6 +146,8 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.listBoxChapter);
 			this.Controls.Add(this.listBoxTitle);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.MaximizeBox = false;
 			this.Name = "FormMovie";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Movie Options";

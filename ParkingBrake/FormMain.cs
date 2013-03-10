@@ -17,9 +17,14 @@ namespace ParkingBrake
 		private BackgroundWorker SecondaryThread;
 		public List<Movie> movieList;
 
+		FormMovie frmMovie;
+		FormTV frmTV;
+
 		public FormMain()
 		{
 			InitializeComponent();
+			frmMovie = new FormMovie();
+			frmTV = new FormTV();
 			PB.frmProgress = new FormProgress();
 			PB.quality = "20";
 		}
@@ -119,26 +124,26 @@ namespace ParkingBrake
 
 		private void buttonMovie_Click(object sender, EventArgs e)
 		{
-			if (listBoxMovies.SelectedIndex >= 0)
+			if ((listBoxMovies.SelectedIndex >= 0) && (!frmMovie.Visible) && (!frmTV.Visible))
 			{
 				PB.currentMovie = movieList[listBoxMovies.SelectedIndex];
 				PB.SetDefault();
 
 				//Load movie dialog
-				FormMovie frmMovie = new FormMovie();
+				frmMovie = new FormMovie();
 				frmMovie.Show();
 			}
 		}
 
 		private void buttonTV_Click(object sender, EventArgs e)
 		{
-			if (listBoxMovies.SelectedIndex >= 0)
+			if ((listBoxMovies.SelectedIndex >= 0) && (!frmMovie.Visible) && (!frmTV.Visible))
 			{
 				PB.currentMovie = movieList[listBoxMovies.SelectedIndex];
 				PB.SetDefault();
 
 				//Load TV dialog
-				FormTV frmTV = new FormTV();
+				frmTV = new FormTV();
 				frmTV.Show();
 			}
 		}
