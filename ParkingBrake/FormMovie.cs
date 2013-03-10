@@ -39,7 +39,7 @@ namespace ParkingBrake
 		private void listBoxTitle_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			//Populate chapter list and assign current title
-			if (listBoxTitle.SelectedIndex >= 0)
+			if (listBoxTitle.SelectedItem != null)
 			{
 				PB.currentTitle = PB.currentMovie.titleList[listBoxTitle.SelectedIndex];
 				listBoxChapter.DataSource = PB.currentTitle.chapterList;
